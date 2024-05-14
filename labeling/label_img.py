@@ -32,10 +32,14 @@ def label_img(img_folder, csv_output):
     print(f"Image nr:{i+1}/{len(images)}, {img_name}")
     print("Press 'q' to quit")
     print("Press 'n' for useless image (no scooter)")  
+    print("Press 'y' for perfect image (scooter is parked perfectly)")
     
     rule1 = input("Kein Scooter (0/1): ")
     if rule1 == 'q': break
     if rule1 == 'n':
+        labels.append([img_name, 1, 1, 1, 1, 1, 1, 1, 1])
+        continue
+    if rule1 == 'y':
         labels.append([img_name, 0, 0, 0, 0, 0, 0, 0, 0])
         continue
     rule2 = input("Scooter unvollständig/zu wenig Umgebung (0/1): ")
