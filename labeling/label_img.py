@@ -54,9 +54,9 @@ def label_img(img_folder, csv_output):
     cv2.destroyAllWindows()
             
             
-  with open(csv_output, 'w', newline='') as file:
+  with open(csv_output, 'a', newline='') as file:
     writer = csv.writer(file, delimiter=';')
-    writer.writerow(['Image', 'Rule1', "Rule2", "Rule3" , "Rule4", "Rule5", "Rule6", "Rule7", "Rule8"])
+    #writer.writerow(['Image', 'Rule1', "Rule2", "Rule3" , "Rule4", "Rule5", "Rule6", "Rule7", "Rule8"])
     writer.writerows(labels)
 
 
