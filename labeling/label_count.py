@@ -11,11 +11,9 @@ def label_count(csv_file):
       #if all rules are 1, the image is useless
       if all([int(rule) == 1 for rule in label[1:]]):
         rules[8] += 1
-        continue
       #if all rules are 0, the image is perfect
       if all([int(rule) == 0 for rule in label[1:]]):
         rules[9] += 1
-        continue
       for i, rule in enumerate(label[1:]):
         rules[i] += int(rule)
         
