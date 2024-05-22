@@ -18,6 +18,9 @@ def label_img(img_folder, csv_output):
             for row in reader:
                 existing_labels.add(row[0])
 
+    # Create the window for displaying the images outside the loop
+    cv2.namedWindow("Image", cv2.WINDOW_AUTOSIZE)
+
     for i, img_name in enumerate(images):
         if img_name in existing_labels:
             print(f"Image {img_name} already labeled")
@@ -25,15 +28,18 @@ def label_img(img_folder, csv_output):
 
         img_path = os.path.join(img_folder, img_name)
         img = cv2.imread(img_path)
+        if img is None:
+            continue
 
+        # Display the image in the already created window
         cv2.imshow("Image", img)
-        cv2.waitKey(1)
+        cv2.waitKey(1)  # Necessary for the window to update
         time.sleep(0.2)
 
         print(f"Image nr:{i + 1}/{len(images)}, {img_name}")
         print("Press 'q' to quit and save")
         print("Press 'n' for useless image (no scooter)")
-        print("Press 'y' to set all remaining rules as zero after next input")
+        print("Press 'y' to set all remaining rules as zero")
         print("Press 'Enter' to skip image")
 
         rules = [
@@ -47,28 +53,28 @@ def label_img(img_folder, csv_output):
             "Scooter steht in Einfahrt / im Weg (0/1): "
         ]
         label = [img_name]
-
         for rule in rules:
-          response = input(rule)
-          if response == 'q':
-            labels.append(label)
-            break
-          elif response == 'n':
-            label.extend([1] * len(rules))
-            break
-          elif response == 'y':
-            label.extend([0] * (len(rules) - len(label) + 1))
-            break
-          elif response == '':
-            continue
-          else:
-            label.append(int(response))
+            response = input(rule)
+            if response == 'q':
+                labels.append(label)
+                break
+            elif response == 'n':
+                label.extend([1] * len(rules))
+                break
+            elif response == 'y':
+                label.extend([0] * (len(rules) - len(label) + 1))
+                break
+            elif response == '':
+                continue
+            else:
+                label.append(int(response))
 
         if response == 'q':
-          break
+            break
 
         labels.append(label)
-        cv2.destroyAllWindows()
+
+    cv2.destroyAllWindows()
 
     with open(csv_output, mode='a', newline='') as file:
         writer = csv.writer(file, delimiter=';')
