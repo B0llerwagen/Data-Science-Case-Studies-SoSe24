@@ -47,8 +47,8 @@ def label_img(img_folder, csv_output):
     rule4 = input("Scooter steht nicht frei (0/1): ")
     rule5 = input("Scooter auf Grünfläche (0/1): ")
     rule6 = input("Scooter blockiert Fahrradständer (0/1): ")
-    rule7 = input("Scooter steht an ÖPNV Haltestelle (0/1): ")
-    rule8 = input("Scooter steht in Einfahrt (0/1): ")    
+    rule7 = input("Scooter steht an ÖPNV Haltestelle / Parkverbot(0/1): ")
+    rule8 = input("Scooter steht in Einfahrt / im Weg (0/1): ")    
     
     labels.append([img_name, rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8])
     cv2.destroyAllWindows()
