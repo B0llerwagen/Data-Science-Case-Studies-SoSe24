@@ -17,14 +17,14 @@ def label_count(csv_file):
       for i, rule in enumerate(label[1:]):
         rules[i] += int(rule)
         
-    print(f"Rule 1: Kein Scooter (0/1): {rules[0]}")
-    print(f"Rule 2: Scooter unvollständig/zu wenig Umgebung (0/1): {rules[1]}")
-    print(f"Rule 3: Scooter steht zu nah an Straße (Bordsteinkante) (0/1): {rules[2]}")
-    print(f"Rule 4: Scooter steht nicht frei (0/1): {rules[3]}")
-    print(f"Rule 5: Scooter auf Grünfläche (0/1): {rules[4]}")
-    print(f"Rule 6: Scooter blockiert Fahrradständer (0/1): {rules[5]}")
-    print(f"Rule 7: Scooter steht an ÖPNV Haltestelle / Parkverbot(0/1): {rules[6]}")
-    print(f"Rule 8: Scooter steht in Einfahrt / im Weg (0/1): {rules[7]}")
+    print(f"Kein Scooter (0/1): {rules[0]}")
+    print(f"Scooter unvollständig/zu wenig Umgebung (0/1): {rules[1]}")
+    print(f"Scooter steht zu nah an Straße (Bordsteinkante) (0/1): {rules[2]}")
+    print(f"Scooter steht nicht frei (0/1): {rules[3]}")
+    print(f"Scooter auf Grünfläche (0/1): {rules[4]}")
+    print(f"Scooter blockiert Fahrradständer (0/1): {rules[5]}")
+    print(f"Scooter steht an ÖPNV Haltestelle / Parkverbot(0/1): {rules[6]}")
+    print(f"Scooter steht in Einfahrt / im Weg (0/1): {rules[7]}")
     
     print(f"Useless images: {rules[8]}")
     print(f"Perfect images: {rules[9]}")
