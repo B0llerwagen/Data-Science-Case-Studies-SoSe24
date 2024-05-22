@@ -27,12 +27,13 @@ def label_img(img_folder, csv_output):
     
     cv2.imshow("Image", img)
     cv2.waitKey(1)
-    time.sleep(0.1)
+    time.sleep(0.2)
     
     print(f"Image nr:{i+1}/{len(images)}, {img_name}")
     print("Press 'q' to quit")
     print("Press 'n' for useless image (no scooter)")  
     print("Press 'y' for perfect image (scooter is parked perfectly)")
+    print("Press 'Enter' to skip image")
     
     rule1 = input("Kein Scooter (0/1): ")
     if rule1 == 'q': break
@@ -41,6 +42,8 @@ def label_img(img_folder, csv_output):
         continue
     if rule1 == 'y':
         labels.append([img_name, 0, 0, 0, 0, 0, 0, 0, 0])
+        continue
+    if rule1 == '': 
         continue
     rule2 = input("Scooter unvollständig/zu wenig Umgebung (0/1): ")
     rule3 = input("Scooter steht zu nah an Straße (Bordsteinkante) (0/1): ")
