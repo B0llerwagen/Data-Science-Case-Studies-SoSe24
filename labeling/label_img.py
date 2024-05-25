@@ -54,7 +54,20 @@ def label_img(img_folder, csv_output):
         ]
         label = [img_name]
         for rule in rules:
-            response = input(rule)
+            while True:  #loop to handle input validation
+                response = input(rule)
+                if response in {'q', 'n', 'y', ''}:
+                    break  
+                try:
+                    int_response = int(response)
+                    if int_response in {0, 1}:
+                        label.append(int_response)
+                        break
+                    else:
+                        print("Invalid input. Please enter '0' or '1'.")
+                except ValueError:
+                    print("Invalid input. Please enter '0', '1', 'n', 'y', or 'q'.")
+
             if response == 'q':
                 break
             elif response == 'n':
@@ -64,14 +77,12 @@ def label_img(img_folder, csv_output):
                 label.extend([0] * (len(rules) - len(label) + 1))
                 break
             elif response == '':
-                break
-            else:
-                label.append(int(response))
+                break  # Skip saving this image's data
 
         if response == 'q':
-            break
+            break  # Complete program exit
         if response == '':
-            continue
+            continue  # Skip appending to labels if skipped
 
         labels.append(label)
 
