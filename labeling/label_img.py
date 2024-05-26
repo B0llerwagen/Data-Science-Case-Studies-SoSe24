@@ -20,6 +20,8 @@ def label_img(img_folder, csv_output):
 
     # Create the window for displaying the images outside the loop
     cv2.namedWindow("Image", cv2.WINDOW_AUTOSIZE)
+    cv2.moveWindow("Image", 0, 0)
+
     if not images:
         print("No images found in the folder")
         return
