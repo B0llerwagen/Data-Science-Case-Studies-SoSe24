@@ -20,6 +20,9 @@ def label_img(img_folder, csv_output):
 
     # Create the window for displaying the images outside the loop
     cv2.namedWindow("Image", cv2.WINDOW_AUTOSIZE)
+    if not images:
+        print("No images found in the folder")
+        return
 
     for i, img_name in enumerate(images):
         if img_name in existing_labels:
@@ -52,9 +55,24 @@ def label_img(img_folder, csv_output):
             "Scooter steht an ÖPNV Haltestelle / Parkverbot(0/1): ",
             "Scooter steht in Einfahrt / im Weg (0/1): "
         ]
+
         label = [img_name]
+
         for rule in rules:
-            response = input(rule)
+            while True:  #loop to handle input validation
+                response = input(rule)
+                if response in {'q', 'n', 'y', ''}:
+                    break  
+                try:
+                    int_response = int(response)
+                    if int_response in {0, 1}:
+                        label.append(int_response)
+                        break
+                    else:
+                        print("Invalid input. Please enter '0' or '1'.")
+                except ValueError:
+                    print("Invalid input. Please enter '0', '1', 'n', 'y', or 'q'.")
+
             if response == 'q':
                 break
             elif response == 'n':
@@ -64,14 +82,12 @@ def label_img(img_folder, csv_output):
                 label.extend([0] * (len(rules) - len(label) + 1))
                 break
             elif response == '':
-                break
-            else:
-                label.append(int(response))
+                break  # Skip saving this image's data
 
         if response == 'q':
-            break
+            break  # Complete program exit
         if response == '':
-            continue
+            continue  # Skip appending to labels if skipped
 
         labels.append(label)
 
@@ -83,4 +99,4 @@ def label_img(img_folder, csv_output):
 
     print("Labeling completed and data saved")
 
-label_img(os.path.join(os.path.dirname(__file__), ("../Yoio_Park_Proof")), "labels.csv")
+label_img(os.path.join(os.path.dirname(__file__), ("../Yoio_Park_Proof")), os.path.join(os.path.dirname(__file__),"../labels.csv"))

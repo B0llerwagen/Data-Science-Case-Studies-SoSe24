@@ -1,4 +1,5 @@
 import csv
+import os
 
 def label_count(csv_file):
   with open(csv_file, mode='r', newline='') as file:
@@ -30,4 +31,4 @@ def label_count(csv_file):
     print(f"Perfect images: {rules[9]}")
     print(f"Total images: {len(labels)}")
     
-label_count("labels.csv")
+label_count(os.path.join(os.path.dirname(__file__), "../labels.csv"))
