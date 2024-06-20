@@ -3,13 +3,13 @@ tensorboard-data-server==0.7.2
 tensorboard-plugin-wit==1.8.1
 tensorflow==2.16.1
 tensorflow-estimator==2.15.0
-tensorflow-io-gcs-filesystem==0.37.0
+tensorflow-io-gcs-filesystem6
 opencv-python==4.9.0.80
 keras==3.3.3
 pandas==1.5.2
 numpy==1.26.4
-scikit-learn==1.2.1
-Pillow==8.2.0
+scikit-learn==1.2.  
+Pillow==10.3.0
 matplot==0.1.9
 matplotlib==3.9.0
-matplotlib-inline==0.1.7
+matplotlib-inline==0.1.7 
