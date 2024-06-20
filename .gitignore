@@ -7,3 +7,6 @@ julius_model/balanced_labels_bike_rack.csv
 julius_model/data_useable.pickle
 julius_model/model_bike_rack_1.h5
 julius_model/test_img.pickle
+models/
+local_data/
+data/
