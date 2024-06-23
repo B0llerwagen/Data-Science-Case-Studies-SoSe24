@@ -71,7 +71,7 @@ all_pre_chosen_5.keras
     F1 Score: [0.79620853 0.24242424 0.375      0.53333333 0.30769231]
 
   
-all_pre_chosen_5.keras
+all_pre_chosen_5.h5
 
     Hamming Loss: 0.37735849056603776
     Accuracy: 0.6226415094339622
@@ -106,6 +106,23 @@ all_pre_chosen_7.keras with ResNet101V2
     F1 Score: [0.74038462 0.17647059 0.19047619 0.15384615 0.125     ]
 
 
+
+all_pre_chosen_10.keras with EfficientNetB5 20 epochs, best weights
+
+    Hamming Loss: 0.2830188679245283
+    Accuracy: 0.7169811320754716
+    Precision: [0.73913043 0.75       0.6        0.5625     1.        ]
+    Recall: [0.90425532 0.57142857 0.54545455 0.40909091 0.18181818]
+    F1 Score: [0.81339713 0.64864865 0.57142857 0.47368421 0.30769231]
+
+
+all_pre_chosen_10.keras with EfficientNetB5 20 epochs
+
+    Hamming Loss: 0.27044025157232704
+    Accuracy: 0.7295597484276729
+    Precision: [0.77570093 0.56521739 0.77777778 0.64705882 0.66666667]
+    Recall: [0.88297872 0.61904762 0.63636364 0.5        0.18181818]
+    F1 Score: [0.82587065 0.59090909 0.7        0.56410256 0.28571429]
 
 new architecture;
 ```
