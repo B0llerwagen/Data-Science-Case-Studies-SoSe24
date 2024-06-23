@@ -8,4 +8,5 @@ julius_model/model_bike_rack_1.h5
 julius_model/test_img.pickle
 model_arthur/models/
 local_data/
-model_arthur/data/
+model_arthur/
+all_models_combine/models
