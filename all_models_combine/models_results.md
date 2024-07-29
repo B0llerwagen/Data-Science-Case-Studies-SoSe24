@@ -106,7 +106,6 @@ weighted avg       0.87      0.87      0.87       206
 
 
 model7 = keras.models.load_model('../models/pre_model_7_1_10_epochs.h5')
-
 new
               precision    recall  f1-score   support
 
@@ -121,7 +120,6 @@ weighted avg       0.94      0.94      0.94        32
 
 
 model8 = keras.models.load_model('../models/pre_model_8_1_10_epochs.h5')
-
 new:
               precision    recall  f1-score   support
 
