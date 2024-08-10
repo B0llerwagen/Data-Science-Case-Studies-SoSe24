@@ -101,4 +101,4 @@ def label_img(img_folder, csv_output):
 
     print("Labeling completed and data saved")
 
-label_img(os.path.join(os.path.dirname(__file__), ("../Yoio_Park_Proof")), os.path.join(os.path.dirname(__file__),"../labels.csv"))
+label_img(os.path.join(os.path.dirname(__file__), ("../../Yoio_Park_Proof")), os.path.join(os.path.dirname(__file__),"../labels.csv"))

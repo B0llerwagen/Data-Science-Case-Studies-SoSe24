@@ -2,7 +2,7 @@ models:
 all on same labels
 
 
-model1 = keras.models.load_model('../models/pre_model_1_1_10_epochs.h5')
+model1 = keras.models.load_model('../../models/pre_model_1_1_10_epochs.h5')
 tested with more data (more 0 in rule 1 (2x rule1 == 1))
 
               precision    recall  f1-score   support
@@ -15,7 +15,7 @@ tested with more data (more 0 in rule 1 (2x rule1 == 1))
 weighted avg       0.95      0.94      0.94        90
 
 
-model2 = keras.models.load_model('../models/pre_model_2_6.keras')
+model2 = keras.models.load_model('../../models/pre_model_2_6.keras')
 trained/tested with more data (more 0 in rule 2 (2x rule2 == 1))
 
               precision    recall  f1-score   support
@@ -28,7 +28,7 @@ trained/tested with more data (more 0 in rule 2 (2x rule2 == 1))
 weighted avg       0.83      0.83      0.83       442
 
 
-model3 = keras.models.load_model('../models/pre_model_3_1_10_epochs.h5')
+model3 = keras.models.load_model('../../models/pre_model_3_1_10_epochs.h5')
 tested with more(new) data (more 0 in rule 3 (2x rule3 == 1))
 
               precision    recall  f1-score   support
@@ -41,7 +41,7 @@ tested with more(new) data (more 0 in rule 3 (2x rule3 == 1))
 weighted avg       0.71      0.69      0.68        89
 
 
-model4 = keras.models.load_model('../models/pre_model_4_1_10_epochs.h5')
+model4 = keras.models.load_model('../../models/pre_model_4_1_10_epochs.h5')
 tested with more(new) data (more 0 in rule 4 (2x rule4 == 1))
 
               precision    recall  f1-score   support
@@ -64,7 +64,7 @@ saved before:
 weighted avg       0.77      0.77      0.77        60
 
 
-model5 = keras.models.load_model('../models/pre_model_5_1_10_epochs.h5')
+model5 = keras.models.load_model('../../models/pre_model_5_1_10_epochs.h5')
 tested with more(new) data (more 0 in rule 5 (2x rule5 == 1))
 
               precision    recall  f1-score   support
@@ -80,7 +80,7 @@ weighted avg       0.86      0.86      0.86        77
 
 
 
-model6 = keras.models.load_model('../models/pre_model_6_1_20_2_epochs.h5')
+model6 = keras.models.load_model('../../models/pre_model_6_1_20_2_epochs.h5')
 
 tested with more(new) data (more 0 in rule 6 (2x rule6 == 1))
               precision    recall  f1-score   support
@@ -93,7 +93,7 @@ tested with more(new) data (more 0 in rule 6 (2x rule6 == 1))
 weighted avg       0.87      0.87      0.87       206
 
 
-model7 = keras.models.load_model('../models/pre_model_7_1_10_epochs.h5')
+model7 = keras.models.load_model('../../models/pre_model_7_1_10_epochs.h5')
 
               precision    recall  f1-score   support
 
@@ -107,7 +107,7 @@ weighted avg       0.94      0.94      0.94        32
 
 
 
-model8 = keras.models.load_model('../models/pre_model_8_1_10_epochs.h5')
+model8 = keras.models.load_model('../../models/pre_model_8_1_10_epochs.h5')
 
               precision    recall  f1-score   support
 
