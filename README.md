@@ -1,4 +1,4 @@
-TODO: change paths for all models to save (add extra ../)
+TODO: resolve issue with model2 pre_trained not opening correctly 
 
 
 # E-Scooter parking evaluation
