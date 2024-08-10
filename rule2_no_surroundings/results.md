@@ -35,7 +35,7 @@ pre_2_1 - trained with more data (more 0 in rule 2 (2x rule2 == 1))
         accuracy                           0.89       442
        macro avg       0.92      0.85      0.87       442
     weighted avg       0.91      0.89      0.89       442
-
+after trying to use this model it turns out it was rather bad but had the high accuracy due to a overlap of training / val data. With new data it performed much worse than the current best model (2_6.keras)
 
 pre_2_2 - trained with less real data (1.5x rule2 == 1)
 
