@@ -30,8 +30,15 @@ There are 2 ways you can proceed.
 - using all models / rules: for this use the files with the "..._all 
 - only use the most important rules / best model: use the "..._not_all_rules" files. They leave out some rules to increase accuracy (mostly due to bad model performance / bad data variety)
 
-This can then be used in test_img_... to let all the CNNs predict your dataset. 
-To evaluate it, use analyse_predictions_... to get the most important statistics of your predictions (like accuracy, recall etc.)
+This can then be used in test_img_... to let all the CNNs predict your dataset. At the end you can also see some examples of your predictions with the corresponding images.
+To evaluate your predictions, use analyse_predictions_... to get the most important statistics of your predictions (like accuracy, recall etc.)
+Our models stats on a big validation dataset: 
+- Accuracy: 87.27%; 
+- F1: 0.9 
+- Precision: 0.88; 
+- Recall: 0.92
+
+
 
 # Other
 - [link](https://datashare.tu-dresden.de/s/JkNpycBKwpcJWXQ) to models if you dont want to generate them yourself
