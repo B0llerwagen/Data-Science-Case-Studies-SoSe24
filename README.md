@@ -1,6 +1,3 @@
-TODO: resolve issue with model2 pre_trained not opening correctly 
-
-
 # E-Scooter parking evaluation
 This is a comprehensive guide to recreate and / or use our model to evaluate the parking situation of an e-scooter
 

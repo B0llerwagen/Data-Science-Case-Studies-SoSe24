@@ -83,6 +83,17 @@ pre_2_4 - result of 2_3.keras
        macro avg       0.89      0.77      0.79       442
     weighted avg       0.86      0.83      0.82       442
 
+
+pre_2_8.keras
+              precision    recall  f1-score   support
+
+           0       0.83      0.93      0.88       281
+           1       0.84      0.68      0.75       161
+
+    accuracy                           0.84       442
+   macro avg       0.84      0.80      0.82       442
+weighted avg       0.84      0.84      0.83       442
+
 ### MobileNetV2 other architecture:
 ```
 base_model = keras.applications.MobileNetV2(input_shape=(512, 512, 3), include_top=False, weights='imagenet')
@@ -177,3 +188,4 @@ pre_model_2_6.h5 - result of new pre trained InceptionV3 - same data as 2_2 5 ep
         accuracy                           0.83       442
        macro avg       0.83      0.79      0.80       442
     weighted avg       0.83      0.83      0.82       442
+
